@@ -154,15 +154,15 @@ namespace HelloWorld
             //} //end switch
 
             ////Part twelve array examples
-            //string[] foodList = new string[5];
-            //foodList[0] = "Milk";
-            //foodList[1] = "Fruit";
-            //foodList[2] = "Meat";
-            //foodList[3] = "Wine";
-            //foodList[4] = "Bread";
+            string[] foodList = new string[5]; //instantiating an array of type string
+            foodList[0] = "Milk"; //adding elements to an array
+            foodList[1] = "Fruit";
+            foodList[2] = "Meat";
+            foodList[3] = "Wine";
+            foodList[4] = "Bread";
             //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
 
-            //int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 }; //instantiating an array of type int and adding elements to an array
             //Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " + foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
 
             //Console.WriteLine(foodList.Length);
@@ -172,8 +172,8 @@ namespace HelloWorld
             //Console.WriteLine(elements[1]); //prints "am"
             //Console.WriteLine(elements[2]); //prints "Spartacus"
 
-            //List<string> foodList = new List<string>();
-            //foodList.Add("Milk");
+            //List<string> foodList = new List<string>(); //instantiating a List of type string
+            //foodList.Add("Milk"); //adding elements to a List
             //foodList.Add("Fruit");
             //foodList.Add("Meat");
             //foodList.Add("Wine");
@@ -190,7 +190,7 @@ namespace HelloWorld
 
             ////Part thirteen while loop example
 
-            string action = " ";
+            //string action = " ";
             //while (action != "exit")
             //{
             //    Console.WriteLine("What is your rank soldier?");
@@ -219,31 +219,44 @@ namespace HelloWorld
             //    action = Console.ReadLine();
             //}
 
-            do //do while loop exmaple
+            //do //do while loop exmaple
+            //{
+            //    Console.WriteLine("What is your rank soldier?");
+            //    string rank = Console.ReadLine();
+
+            //    Console.WriteLine("What is your age soldier?");
+            //    int age = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("What is your job soldier?");
+            //    string job = Console.ReadLine();
+
+            //    if ((rank == "officer") || (age <= 26))
+            //    {
+            //        Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+            //    }
+            //    else if ((job == "cook") || (age >= 26))
+            //    {
+            //        Console.WriteLine("My army has to eat. Pack your pots and pans");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Sorry you are staying home.");
+            //    }
+            //    Console.WriteLine("Add another? Type exit to quit");
+            //    action = Console.ReadLine();
+            //} while (action != "exit");
+
+            ////Part fourteen for-loop examples
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            for (int i = 0; i < foodAmount.Length; i++)
             {
-                Console.WriteLine("What is your rank soldier?");
-                string rank = Console.ReadLine();
+                Console.WriteLine("Enter a value for " + foodList[i]);
+                foodAmount[i] = int.Parse(Console.ReadLine());
+            }
 
-                Console.WriteLine("What is your age soldier?");
-                int age = int.Parse(Console.ReadLine());
-                Console.WriteLine("What is your job soldier?");
-                string job = Console.ReadLine();
-
-                if ((rank == "officer") || (age <= 26))
-                {
-                    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
-                }
-                else if ((job == "cook") || (age >= 26))
-                {
-                    Console.WriteLine("My army has to eat. Pack your pots and pans");
-                }
-                else
-                {
-                    Console.WriteLine("Sorry you are staying home.");
-                }
-                Console.WriteLine("Add another? Type exit to quit");
-                action = Console.ReadLine();
-            } while (action != "exit");
 
 
         } //Main
