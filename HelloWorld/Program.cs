@@ -251,14 +251,44 @@ namespace HelloWorld
             //    Console.WriteLine(i);
             //}
 
-            for (int i = 0; i < foodAmount.Length; i++)
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine("Enter a value for " + foodList[i]);
+            //    foodAmount[i] = int.Parse(Console.ReadLine());
+            //}
+
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne); 
+            Console.WriteLine(Reverse(messageTwo));
+
+        } //Main method
+
+        static bool IsGodLike(int age)
+        {
+            bool status;
+            if (age % 2 == 0)
             {
-                Console.WriteLine("Enter a value for " + foodList[i]);
-                foodAmount[i] = int.Parse(Console.ReadLine());
+                status = false;
             }
+            else
+            {
+                status = true;
+            }
+            return status;
+        } // bool IsGodLike method
+
+        static string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = " ";
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
+        } // string Reverse method
 
 
 
-        } //Main
     } //Program
 } //namespace
